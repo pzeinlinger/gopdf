@@ -1415,7 +1415,7 @@ func (gp *GoPdf) ImportPage(sourceFile string, pageno int, box string) int {
 // ImportPageStream imports page using a stream.
 // Return template id after importing.
 // gofpdi code
-func (gp *GoPdf) ImportPageStream(sourceStream *io.ReadSeeker, pageno int, box string) int {
+func (gp *GoPdf) ImportPageStream(sourceStream io.ReadSeeker, pageno int, box string) int {
 	// Set source file for fpdi
 	gp.fpdi.SetSourceStream(sourceStream)
 
